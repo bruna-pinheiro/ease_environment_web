@@ -1,0 +1,189 @@
+.header-wrap {
+  width: 100%; 
+}
+.header-grid {
+	display: grid;
+	grid-template-columns: 47% 53%;
+}
+.my-bookings-img {
+  width: 100%;
+  height: 100%;
+  object-position: 50%;
+  object-fit: cover;
+	position-y: 10%;
+  position-x: -397px;
+}
+.header-grid-right {
+	background-color: #EAF3F7;
+	text-align: center;
+	height: 100%;
+}
+.enter-bookings {
+	padding: 10% 5% 2% 5%;
+}
+.find-bookings-btn {
+  background-color: #39A9DB;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1.3% 5%;
+  margin-left: 2%;
+}
+.find-bookings-btn:hover {
+  background-color: #2D87AF;
+}
+#search-bookings {
+	height: 44px;
+}
+input[placeholder] {
+	font-size: 13px;
+}
+input[type=text].input-my-bookings, select, textarea {
+  width: 68%;
+  height: 35px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  margin-bottom: 14px;
+  resize: vertical
+  outline: none;
+}
+.booking-info {
+	display: grid;
+	grid-template-columns: 25% 75%;
+	background-color: white;
+	border-style: solid;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #EAE9E9;
+	width: 80%;
+	padding: 2% 3% 0 3%;
+	margin: 2% 7% 0 7%;
+	text-align: left;
+}
+.booking-info-details {
+
+}
+.detail {
+	font-size: 20px;
+	line-height: 10px;
+}
+.changes {
+	font-size: 20px;
+	color: #DF9A57;
+	text-align: center;
+	line-height: 25px;
+}
+.image-circles-area {
+	margin-top: 20%;
+}
+.circles-bookings {
+	align-self: end;
+	width: 20%;
+}
+.link-contact {
+	color: #DF9A57;
+}
+.link-contact:hover {
+	text-decoration: none;
+}
+/*.booking-area {
+  height: 350px;
+}*/
+
+
+/* Media Queries
+-------------------------*/
+
+/*----- Ultrawide -----*/
+
+@media only screen and (min-width: 2400px) {
+  
+}
+
+/*----- Netbook -----*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+	.header-grid {
+    width: 100%;
+    grid-template-columns: 47% 53%;
+	}
+	.detail {
+    font-size: 16px;
+	}
+}
+
+/*----- Tablet -----*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.enter-bookings {
+    font-size: 20px;
+	}
+	#search-bookings {
+    height: 40px;
+	}	
+	.find-bookings-btn {
+    border-radius: 3px;
+    padding: 2% 5%;
+	}
+	.booking-info {
+		grid-template-columns: 30% 70%;
+	}
+	input[type=text].input-my-bookings, select, textarea {
+    width: 68%;
+    padding: 8px;
+	}
+	.detail {
+    font-size: 15px;
+	}
+	.changes {
+    font-size: 17px;
+	}
+}
+
+/*----- Smartphones -----*/
+
+@media only screen and (max-width: 767px) {
+	.header-grid {
+    grid-template-columns: 100%;
+    width: 100%;
+	}
+	.header-wrap {
+    padding: 0 0 5% 0%;
+	}
+	.enter-bookings {
+    font-size: 20px;
+	}
+	#search-bookings {
+    height: 40px;
+	}	
+	.booking-info {
+		grid-template-columns: 75px 67%;
+	}
+	.find-bookings-btn {
+    border-radius: 3px;
+    padding: 2% 5%;
+	}
+	input[type=text].input-my-bookings, select, textarea {
+    width: 68%;
+    padding: 8px;
+	}
+	.detail {
+    font-size: 12px;
+    line-height: 15px;
+	}
+	.changes {
+    font-size: 17px;
+	}
+}
+
+
+
+
+
+
+
+

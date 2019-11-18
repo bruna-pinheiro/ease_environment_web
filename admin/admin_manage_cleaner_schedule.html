@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" id="simple-container">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ease Environment | Admin Manage Cleaner Availability</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/login.css">
+  <link rel="stylesheet" href="../styles/admin.css">
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/admin_cleaner_details.css">
+  <link rel="stylesheet" href="../styles/admin-manage-cleaners.css">
+  <link rel="stylesheet" href="../styles/modal.css">
+  <link rel="stylesheet" href="../styles/admin_manage_cleaner_schedule.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="../styles/datepicker.css">
+  <link rel="stylesheet" href="../styles/timepicker.css">
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <link rel="stylesheet" href="../styles/jquery_timepicker.css">
+  <script>
+    $( function() {
+      $( "#date" ).datepicker({
+        dateFormat: 'mm/dd/yy'
+      });
+    });
+
+    $( function() {
+      $('#time').timepicker({
+        timeFormat: 'h:mm p',
+        interval: 60,
+        minTime: '08',
+        maxTime: '08:00pm',
+        defaultTime: '08',
+        startTime: '08:00',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+      });
+    });
+
+    $( function() {
+      $('#time-to').timepicker({
+        timeFormat: 'h:mm p',
+        interval: 60,
+        minTime: '08',
+        maxTime: '08:00pm',
+        defaultTime: '08',
+        startTime: '08:00',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+      });
+    });
+
+    $( function() {
+      $( "#recurring-date" ).datepicker({
+        dateFormat: 'mm/dd/yy'
+      });
+    });
+
+    $( function() {
+      $('#recurring-time').timepicker({
+        timeFormat: 'h:mm p',
+        interval: 60,
+        minTime: '08',
+        maxTime: '08:00pm',
+        defaultTime: '08',
+        startTime: '08:00',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+      });
+    });
+
+    $( function() {
+      $('#recurring-time-to').timepicker({
+        timeFormat: 'h:mm p',
+        interval: 60,
+        minTime: '08',
+        maxTime: '08:00pm',
+        defaultTime: '08',
+        startTime: '08:00',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav>
+    <a id="logo-nav" href="#home"><img src="../images/logo.png" class="img-logo-nav"></a>
+    <div class="dropdown">
+      <i onclick="myFunction()" class="fas fa-bars dropbtn"></i>
+
+      <div id="myDropdown" class="dropdown-content">
+        <a href="../admin/admin_dashboard.html" class="dropdown-admin-panel-link">Admin <br>Panel</a>
+        <a href="../admin/admin_manage_cleaners.html" class="dropdown-link"><i class="fas fa-users dropdown-link-icon"></i><br> Manage <br>Cleaners</a>
+        <a href="../admin/admin_manage_bookings.html" class="dropdown-link"><i class="fas fa-clipboard-list dropdown-link-icon"></i><br> Manage <br>Bookings</a>
+        <a href="../admin/admin_change_password.html" class="dropdown-link"><i class="fas fa-lock dropdown-link-icon"></i><br> Change <br>Password</a>
+        <a href="#" class="dropdown-link"><i class="fas fa-sign-out-alt fa-rotate-180 dropdown-link-icon"></i><br> Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidenav">
+    <a href="../admin/admin_dashboard.html"><p class="sidebar-title">Admin Panel</p></a>
+    <a class="active-sidebar-link" href="../admin/admin_manage_cleaners.html"><i class="fas fa-users sidebar-icon"></i><p class="sidebar-link-text">Manage Cleaners</p></a>
+    <a class="sidebar-link" href="../admin/admin_manage_bookings.html"><i class="fas fa-clipboard-list sidebar-icon"></i><p class="sidebar-link-text">Manage Bookings</p></a>
+    <a class="sidebar-link" href="../admin/admin_change_password.html"><i class="fas fa-lock sidebar-icon"></i><p class="sidebar-link-text">Change Password</p></a>
+    <a class="sign-out-link sidebar-link" href="../admin/login.html"><i class="fas fa-sign-out-alt fa-rotate-180 sign-out-icon"></i><p class="sign-out-link-text">Sign Out</p></a>
+  </div>
+
+  <div class="wrap">
+    <div class="main">
+      <div class="back-btn-area-mobile">
+        <a href="../admin/admin_cleaner_detail.html" class="cleaner-details-btn">Back</a>
+      </div>
+      <p class="pending-books"></p>
+      <p class="admin-title">Manage Calendar Availability</p>
+
+      <div class="cleaner-dashboard-grid">
+        <div>
+          <div class="info-chart">
+            <div class="headline">
+              <p>One time available dates</p>
+            </div>
+            <table style="width:100%" class="cleaner-dashboard-table">
+              <tr>
+                <th>Date</th>
+                <th>From</th>
+                <th>To</th>
+                <th id="center-align-column">Settings</th>
+              </tr>
+              <tr>
+                <td>03/21/2019</td>
+                <td>7:00 AM</td>
+                <td>9:00 PM</td>
+                <td style="text-align: center;"><a><i class="delete-icon del-sch far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr>
+                <td>03/28/2019</td>
+                <td>7:00 AM</td>
+                <td>9:00 PM</td>
+                <td style="text-align: center;"><a><i class="delete-icon del-sch far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr style="height: 120px;">
+                <td> &nbsp </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+            </table>
+            <div class="change-page">
+                <a class="left-arrow" href="#"><i class="fas fa-angle-left"></i></a>
+                <a class="double-left-arrow" href="#"><i class="fas fa-angle-double-left"></i></a>
+                <a class="page-number" >1</a>
+                <a class="double-right-arrow" href="#"><i class="fas fa-angle-double-right"></i></a>
+                <a class="right-arrow" href="#"><i class="fas fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="cleaner-dashboard-create-new-btn">
+            <a href="#create-new" class="btn-create" id="new-one-time-modal-btn">Add New</a>
+          </div>
+        </div>
+        <div>
+          <div class="info-chart">
+            <div class="headline">
+              <p>Repeating Schedule Dates</p>
+            </div>
+            <table style="width:100%" class="cleaner-dashboard-table">
+              <tr>
+                <th>Day</th>
+                <th>From</th>
+                <th>To</th>
+                <th id="center-align-column">Settings</th>
+              </tr>
+              <tr>
+                <td>Monday</td>
+                <td>7:00 AM</td>
+                <td>9:00 PM</td>
+                <td style="text-align: center;"><a><i class="delete-icon del-sch far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>7:00 AM</td>
+                <td>9:00 PM</td>
+                <td style="text-align: center;"><a><i class="delete-icon del-sch far fa-trash-alt"></i></a></td>
+              </tr>
+              <tr style="height: 120px;">
+                <td> &nbsp </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+            </table>
+            <div class="change-page">
+                <a class="left-arrow" href="#"><i class="fas fa-angle-left"></i></a>
+                <a class="double-left-arrow" href="#"><i class="fas fa-angle-double-left"></i></a>
+                <a class="page-number" >1</a>
+                <a class="double-right-arrow" href="#"><i class="fas fa-angle-double-right"></i></a>
+                <a class="right-arrow" href="#"><i class="fas fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="cleaner-dashboard-create-new-btn">
+            <a href="#create-new" class="btn-create" id="new-recurring-time-modal-btn">Add New</a>
+          </div>
+        </div>
+        <div class="cleaner-details-btns-area">
+          <div class="back-btn-area">
+            <a href="../admin/admin_cleaner_detail.html" class="cleaner-details-btn">Back</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="new-one-time-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal-btn">&times;</span>
+      <p class="modal-title">New one time available date</p>
+      <form action="">
+        <div class="form-modal-area">
+          <div class="input-area">
+            <label for="date" class="date label-modal">Date</label>
+            <input type="text" id="date" class="datepicker openemr-datepicker input-modal" name="date" placeholder="Select a Date">
+          </div>
+          <div class="input-area">
+            <label for="time" class="time label-modal">Time From</label>
+            <input type="text" id="time" class="timepicker input-modal" name="time" placeholder="Select a Time">
+          </div>
+          <div class="input-area">
+            <label for="time" class="time label-modal">Time To</label>
+            <input type="text" id="time-to" class="timepicker input-modal" name="time" placeholder="Select a Time">
+          </div>
+        </div>
+        <div class="submit-modal-area">
+          <input type="submit" value="Create" class="submit-form-modal" id="one-time-submit-modal-btn">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="new-recurring-time-modal" class="second-modal">
+    <div class="modal-content">
+      <span class="close" id="recurring-close">&times;</span>
+      <p class="modal-title">New repeating schedule days</p>
+      <form action="">
+        <div class="form-modal-area">
+          <div class="input-area">
+            <label for="date" class="date label-modal">Day</label>
+            <select name="filter" class="select-day">
+              <option value="all">All</option>
+              <option value="sunday">Sunday</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+          </div>
+          <div class="input-area">
+            <label for="time" class="time label-modal">Time From</label>
+            <input type="text" id="recurring-time" class="timepicker input-modal" name="time" placeholder="Select a Time">
+          </div>
+          <div class="input-area">
+            <label for="time" class="time label-modal">Time To</label>
+            <input type="text" id="recurring-time-to" class="timepicker input-modal" name="time" placeholder="Select a Time">
+          </div>
+        </div>
+        <div class="submit-modal-area">
+          <input type="submit" value="Create" class="submit-form-modal" id="recurring-submit-modal-btn">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  var modal = document.getElementById("new-one-time-modal");
+  var btn = document.getElementById("new-one-time-modal-btn");
+  var span = document.getElementById("close-modal-btn");
+  var submit = document.getElementById("one-time-submit-modal-btn");
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  submit.onclick = function() {
+    modal.style.display = "none";
+  }
+
+
+  var recurringModal = document.getElementById("new-recurring-time-modal");
+  var recurringBtn = document.getElementById("new-recurring-time-modal-btn");
+  var recurringSpan = document.getElementById("recurring-close");
+  var recurringSubmit = document.getElementById("recurring-submit-modal-btn");
+  recurringBtn.onclick = function() {
+    recurringModal.style.display = "block";
+  }
+  recurringSpan.onclick = function() {
+    recurringModal.style.display = "none";
+  }
+  recurringSubmit.onclick = function() {
+    recurringModal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    } else if (event.target == recurringModal) {
+      recurringModal.style.display = "none";
+    }
+  }
+</script>

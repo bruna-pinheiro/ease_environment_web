@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" id="simple-container">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ease Environment | Cleaner - New Booking Details</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/login.css">
+  <link rel="stylesheet" href="../styles/cleaner_new_bookings.css">
+  <link rel="stylesheet" href="../styles/cleaner_new_booking_details.css">
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/modal.css">
+</head>
+
+<body>
+  <nav>
+    <a id="logo-nav" href="#home"><img src="../images/logo.png" class="img-logo-nav"></a>
+    <div class="dropdown">
+      <i onclick="myFunction()" class="fas fa-bars dropbtn"></i>
+
+      <div id="myDropdown" class="dropdown-content">
+        <a href="../admin/cleaner_dashboard.html" class="dropdown-admin-panel-link">Cleaner <br>Panel</a>
+        <a href="../admin/cleaner_new_bookings.html" class="dropdown-link"><i class="far fa-file dropdown-link-icon"></i><br> New <br>Bookings</a>
+        <a href="../admin/cleaner_my_bookings.html" class="dropdown-link"><i class="far fa-calendar-alt dropdown-link-icon"></i><br> My <br>Bookings</a>
+        <a href="../admin/cleaner_change_password.html" class="dropdown-link"><i class="fas fa-lock dropdown-link-icon"></i><br> Change <br>Password</a>
+        <a href="#" class="dropdown-link"><i class="fas fa-sign-out-alt fa-rotate-180 dropdown-link-icon"></i><br> Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidenav">
+    <a href="../admin/cleaner_dashboard.html"><p class="sidebar-title">Cleaner Panel</p></a>
+    <a class="active-sidebar-link" href="../admin/cleaner_new_bookings.html"><i class="far fa-file sidebar-icon"></i><p class="sidebar-link-text">New Bookings</p></a>
+    <a class="sidebar-link" href="../admin/cleaner_my_bookings.html"><i class="far fa-calendar-alt sidebar-icon"></i><p class="sidebar-link-text">My <br>Bookings</p></a>
+    <a class="sidebar-link" href="../admin/cleaner_change_password.html"><i class="fas fa-lock sidebar-icon"></i><p class="sidebar-link-text">Change Password</p></a>
+    <a class="sign-out-link sidebar-link" href="#"><i class="fas fa-sign-out-alt fa-rotate-180 sign-out-icon"></i><p class="sign-out-link-text">Sign Out</p></a>
+  </div>
+
+  <div class="wrap">  
+    <div class="main">
+      <div class="back-btn-area-mobile">
+        <a href="../admin/cleaner_new_bookings.html" class="back-btn">Back</a>
+      </div>
+      <p class="header-line"></p>
+      <p class="booking-details-title">Booking Details</p>
+      <div class="infos-area">
+        <div>
+          <div class="first-info-area">
+            <p class="info-title">Name: </p>
+            <p class="info-description">Jonh Brown</p>
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Address: </p>
+            <p class="info-description">123 Sample St.</p>
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Date: </p>
+            <p class="info-description">03/21/2019</p>
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Rooms: </p>
+            <p class="info-description">2</p>
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Price: </p>
+            <p class="info-description">$40.00</p>
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Status: </p>
+            <p class="info-description info-status-confirmed">Confirmed</p>
+          </div>
+        </div>
+        <div>
+          <div class="second-info-area">
+            <p class="info-title">Email: </p>
+            <p class="info-description">Jonh Brown</p>
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Phone Number: </p>
+            <p class="info-description">123 Sample St.</p>
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Time: </p>
+            <p class="info-description">03/21/2019</p>
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Bathroom: </p>
+            <p class="info-description">2</p>
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Cleaner Apointed: </p>
+            <p class="info-description">$40.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="booking-details-btns-area">
+        <div class="back-btn-area">
+          <a href="../admin/cleaner_new_bookings.html" class="booking-details-btn">Back</a>
+        </div>
+        <div class="advance-btns-area">
+          <a href="#" class="booking-details-btn delete-detail-btn margin-left-25" id="accept-booking-modal-btn">Accept This Booking</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="accept-booking-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-text">
+          <p class="modal-title">Success!</p>
+          <p class="modal-txt">You're now the cleaner responsible for this booking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+<script type="text/javascript">
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
+  var modal = document.getElementById("accept-booking-modal");
+  var btn = document.getElementById("accept-booking-modal-btn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>

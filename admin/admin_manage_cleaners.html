@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" id="simple-container">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ease Environment | Admin Manage Cleaners</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/login.css">
+  <link rel="stylesheet" href="../styles/admin.css">
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/admin-manage-cleaners.css">
+  <link rel="stylesheet" href="../styles/modal.css">
+</head>
+
+<body>
+  <nav>
+    <a id="logo-nav" href="#home"><img src="../images/logo.png" class="img-logo-nav"></a>
+    <div class="dropdown">
+      <i onclick="myFunction()" class="fas fa-bars dropbtn"></i>
+
+      <div id="myDropdown" class="dropdown-content">
+        <a href="../admin/admin_dashboard.html" class="dropdown-admin-panel-link">Admin <br>Panel</a>
+        <a href="../admin/admin_manage_cleaners.html" class="dropdown-link"><i class="fas fa-users dropdown-link-icon"></i><br> Manage <br>Cleaners</a>
+        <a href="../admin/admin_manage_bookings.html" class="dropdown-link"><i class="fas fa-clipboard-list dropdown-link-icon"></i><br> Manage <br>Bookings</a>
+        <a href="../admin/admin_change_password.html" class="dropdown-link"><i class="fas fa-lock dropdown-link-icon"></i><br> Change <br>Password</a>
+        <a href="#" class="dropdown-link"><i class="fas fa-sign-out-alt fa-rotate-180 dropdown-link-icon"></i><br> Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidenav">
+    <a href="../admin/admin_dashboard.html"><p class="sidebar-title">Admin Panel</p></a>
+    <a class="active-sidebar-link" href="../admin/admin_manage_cleaners.html"><i class="fas fa-users sidebar-icon"></i><p class="sidebar-link-text">Manage Cleaners</p></a>
+    <a class="sidebar-link" href="../admin/admin_manage_bookings.html"><i class="fas fa-clipboard-list sidebar-icon"></i><p class="sidebar-link-text">Manage Bookings</p></a>
+    <a class="sidebar-link" href="../admin/admin_change_password.html"><i class="fas fa-lock sidebar-icon"></i><p class="sidebar-link-text">Change Password</p></a>
+    <a class="sign-out-link sidebar-link" href="../admin/login.html"><i class="fas fa-sign-out-alt fa-rotate-180 sign-out-icon"></i><p class="sign-out-link-text">Sign Out</p></a>
+  </div>
+
+  <div class="wrap">  
+    <div class="main">
+      <p class="pending-books"></p>
+      <p class="admin-title">Current Cleaners</p>
+      <div class="info-chart">
+        <div class="headline-filter">
+          <p class="filter-by">Filter by:</p>
+          <select name="filter" class="select-filter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <table style="width:100%">
+          <tr>
+            <th>Name</th>
+            <th class="cleaner-email">E-mail</th>
+            <th class="cleaner-phone-number">Phone Number</th>
+            <th id="center-align-column">Status</th>
+            <th id="center-align-column">Settings</th>
+          </tr>
+          <tr>
+            <td><a href="../admin/admin_cleaner_detail.html" class="table-link">David Jones</a></td>
+            <td class="cleaner-email">david@sample.com</td>
+            <td class="cleaner-phone-number">(000)000-0000</td>
+            <td id="center-align-column" class="active-status">Active</td>
+            <td id="center-align-column" class="active-status-mobile"><i class="fas fa-circle"></i></td>
+            <td class="text-center"><a href="../admin/admin_cleaner_detail_edit.html"><i id="center-align-column" class="edit-icon fas fa-pencil-alt"></i></a><a><i id="center-align-column" class="delete-icon far fa-trash-alt"></i></a></td>
+          </tr>
+          <tr>
+            <td><a href="../admin/admin_cleaner_detail.html" class="table-link">Charles Houston</a></td>
+            <td class="cleaner-email">charles@sample.com</td>
+            <td class="cleaner-phone-number">(111)111-1111</td>
+            <td id="center-align-column" class="inactive-status">Inactive</td>
+            <td id="center-align-column" class="inactive-status-mobile"><i class="fas fa-circle"></i></td>
+            <td class="text-center"><a href="../admin/admin_cleaner_detail_edit.html"><i id="center-align-column" class="edit-icon fas fa-pencil-alt"></i></a><a><i id="center-align-column" class="delete-icon far fa-trash-alt"></i></a></td>
+          </tr>
+        </table>
+        <div class="change-page">
+            <a class="left-arrow" href="#"><i class="fas fa-angle-left"></i></a>
+            <a class="double-left-arrow" href="#"><i class="fas fa-angle-double-left"></i></a>
+            <a class="page-number" >1</a>
+            <a class="double-right-arrow" href="#"><i class="fas fa-angle-double-right"></i></a>
+            <a class="right-arrow" href="#"><i class="fas fa-angle-right"></i></a>
+        </div>
+      </div>
+      <div class="create-new-btn">
+        <a href="#create-new" class="btn-create" id="new-cleaner-moda-btn">Create New</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="new-cleaner-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p class="modal-title">New Cleaner</p>
+      <form action="">
+        <div class="form-modal-area">
+          <div class="input-area">
+            <label for="" class="label-modal">First Name</label>
+            <input type="text" class="input-modal">
+          </div>
+          <div class="input-area">
+            <label for="" class="label-modal">Phone Number</label>
+            <input type="text" class="input-modal">
+          </div>
+          <div class="input-area">
+            <label for="" class="label-modal">Username</label>
+            <input type="text" class="input-modal">
+          </div>
+          <div class="input-area">
+            <label for="" class="label-modal">Last Name</label>
+            <input type="text" class="input-modal">
+          </div>
+          <div class="input-area">
+            <label for="" class="label-modal">E-mail</label>
+            <input type="text" class="input-modal">
+          </div>
+        </div>
+        <div class="submit-modal-area">
+          <input type="submit" value="Create" class="submit-form-modal">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+
+<script>
+  var modal = document.getElementById("new-cleaner-modal");
+  var btn = document.getElementById("new-cleaner-moda-btn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>

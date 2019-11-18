@@ -1,0 +1,315 @@
+
+/*----- Schedule Info -----*/
+
+.form-schedule-now {
+  border-radius: 5px;
+  background-color: #F4F4F3;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) scroll;
+  padding: 5% 5% 2% 5%;
+  margin: 5% 0 5% 8%;
+  width: 74%;
+}
+.schedule-info-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.form-schedule-now label {
+  margin: 19% 0;
+}
+.form-left {
+  margin-top: 12%;
+}
+input[type=text].schedule-info-form, select, textarea {
+  width: 100%;
+  height: 35px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 4%;
+  margin-bottom: 14px;
+  resize: vertical
+  outline: none;
+}
+.inline-content-left {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-row-gap: 130%;
+}
+input[type=text].datepicker, select, textarea {
+  width: 50%;
+  height: 35px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5%;
+  margin-bottom: 14px;
+}
+input[type=text].timepicker, select, textarea {
+  width: 50%;
+  height: 35px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5%;
+  margin-bottom: 14px;
+}
+.time-area {
+  margin-top: 25%;
+}
+.form-right {
+  margin-top: 12%;
+}
+.form-right-mobile {
+  display: none;
+}
+.inline-location label {
+  margin-top: 12%;
+}
+.phone {
+  margin: 19% 0;
+}
+.inline-numbers {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.number-rooms {
+  margin: 19% 0;
+}
+.number-bathrooms {
+  margin: 19% 0;
+}
+.book-btn-mobile {
+  display: none;
+}
+.btn-book-now {
+  background-color: #39A9DB;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1% 3%;
+  float: right;
+}
+.book-form-img {
+  margin-top: 2%;
+  margin-left: 18%;
+  width: 10%;
+}
+.book-form-circles-mobile {
+  display: none;
+}
+.book-form-circles {
+  text-align: center;
+
+}
+
+/*------ Modal ------*/
+
+.modal-title {
+  font-weight: 700;
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+.booking-confirmation-ok-modal-btn:hover {
+  background-color: #2d87af;
+}
+
+
+/* Media Queries
+-------------------------*/
+
+/*----- Ultrawide -----*/
+
+@media only screen and (min-width: 2400px) {
+  
+}
+
+/*----- Netbook -----*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .form-schedule-now {
+    padding: 5% 5% 0% 5%;
+  }
+  .modal-text p {
+    line-height: 36px;
+  }
+  .inline-numbers input {
+    margin-top: 26px !important;
+  }
+}
+
+/*----- Tablet -----*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .form-schedule-now {
+    padding: 5% 5% 1% 5%;
+    width: 74%;
+    height: 100%; 
+  }
+  .form-schedule-now label {
+    margin: 13% 0;
+    font-size: 14px;
+  }
+  .schedule-info-grid {
+    display: grid;
+    grid-template-columns: 47% 53%;
+  }
+  input[type=text].schedule-info-form, select, textarea {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3%;
+    margin-bottom: 9px;
+    margin-left: 1%;
+  }
+  input[type=text].datepicker, select, textarea {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5%;
+    margin-bottom: 14px;
+  }
+  input[type=text].timepicker, select, textarea {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5%;
+    margin-bottom: 14px;
+}
+  .inline-content-left {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-row-gap: 130%;
+  }
+  #phone {
+    margin-top: 5%;
+  }
+  .inline-numbers input {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 13px !important;
+  }
+  .inline-numbers {
+    display: grid;
+    grid-template-columns: 54% 50%;
+  }
+  .btn-book-now {
+    border-radius: 3px;
+    padding: 1% 3%;
+    font-size: 15px;
+    margin-top: 2%;
+  }
+
+}
+
+/*----- Smartphones -----*/
+
+@media only screen and (max-width: 767px) {
+  .intro-form {
+    align-self: center;
+  }
+  .form-right {
+    display: none;
+  }
+  .book-btn {
+    display: none;
+  }
+  .book-form-circles {
+    display: none;
+  }
+  .book-btn-mobile {
+    display: block;
+    margin-top: 10%;
+  }
+  .form-right-mobile {
+    display: block;
+  }
+  .book-form-circles-mobile {
+    display: block;
+  }
+  .mobile-schedule-info {
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 10% 7%;
+  }
+  .form-schedule-now {
+    padding: 5% 5% 35% 5%;
+    width: 74%;
+    height: 100%; 
+  }
+  .schedule-info-grid {
+    grid-template-columns: 100%;
+  }
+  .inline-content-left {
+    grid-template-columns: 35% 65%;
+    grid-row-gap: 20%;
+  }
+  .inline-content {
+    grid-template-columns: 25% 75%;
+  }
+  .inline-location {
+    grid-template-columns: 25.2% 55%;
+  }
+  .inline-numbers {
+    grid-template-columns: 26% 30%;
+  }
+  #phone {
+    margin-top: 5%;
+  }
+  .inline-numbers input {
+    margin-top: 13px !important;
+    margin-left: 5% !important;
+  }
+  input[type=text].datepicker, select, textarea {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5%;
+    margin-bottom: 14px;
+  }
+  input[type=text].timepicker, select, textarea {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5%;
+    margin-bottom: 14px;
+  }
+  input[type=text].schedule-info-form, select, textarea {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3%;
+    margin-bottom: 9px;
+    margin-left: 1%;
+  }
+  .form-right-mobile label {
+    margin: 13% 5% 13% 0;
+    font-size: 14px;
+  }
+  .grid-label {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0%;
+    width: 100%;
+  }
+  .book-form-img {
+    margin-top: -22%;
+    width: 20%;
+    float: right;
+  }
+  .btn-book-now {
+    border-radius: 3px;
+    padding: 2% 4%;
+    font-size: 14px;
+    margin: 0% 34%;
+  }
+}

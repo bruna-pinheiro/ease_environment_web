@@ -1,0 +1,7 @@
+.ui-timepicker-container {
+  font-size: 12px !important;
+}
+#ui-active-item {
+  color: white !important;
+  background: #96CBE2 !important;
+}

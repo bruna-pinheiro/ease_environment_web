@@ -1,0 +1,93 @@
+
+/*-----Cleaner Availability Table-----*/
+.cleaner-dashboard-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  columns-gap: 5%;
+}
+.cleaner-dashboard-create-new-btn {
+  margin-top: 4%;
+  margin-left: 82%;
+}
+.del-sch {
+  margin-left: 0 !important;
+}
+
+.select-day {
+  font-size: 17px;
+  width: 100%;
+  height: 35px;
+  padding: 0 0 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  margin-bottom: 14px;
+  resize: vertical outline: none;
+}
+/* Media Queries
+-------------------------*/
+
+/*----- Ultrawide -----*/
+
+@media only screen and (min-width: 2400px) {
+  .cleaner-dashboard-create-new-btn {
+    margin-top: 4%;
+    margin-left: 89%;
+  }
+}
+
+/*----- Netbook -----*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+ .cleaner-dashboard-create-new-btn {
+    margin-left: 76%;
+  }
+}
+
+/*----- Tablet -----*/
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .cleaner-dashboard-create-new-btn {
+    margin-left: 85%;
+  }
+  .cleaner-dashboard-grid {
+    grid-template-columns: 100%;
+    grid-row-gap: 5%;
+  }
+  .main {
+    margin-left: 0 !important;
+  }
+  .my-bookings-headline {
+    font-size: 15px;
+    margin: 8% 6% 0 6%;
+  }
+  .modal-btn {
+    width: 80%;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 767px) {
+  
+}
+
+/*----- Smartphones -----*/
+
+@media only screen and (max-width: 767px) {
+  .cleaner-dashboard-grid {
+    grid-template-columns: 100%;
+    grid-row-gap: 5%;
+	}
+	.pending-books {
+    margin: 8% 6% 0 6%;
+	}
+	.cleaner-dashboard-create-new-btn {
+    margin-left: 35%;
+  }
+	.btn-create {
+    padding: 5% 8%;
+	}
+}
+
+

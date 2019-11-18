@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" id="simple-container">
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ease Environment | My Bookings</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Quicksand&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/home.css">
+	<link rel="stylesheet" href="styles/schedule-now.css">
+	<link rel="stylesheet" href="styles/my-bookings.css">
+</head>
+
+<body>
+	<nav>
+		<a id="logo-nav" href="index.html"><img src="images/logo.png" class="img-logo-nav"></a>
+		<!-- Dropdown Navigation Bar -->
+		<div class="dropdown">
+	  		<i class="fas fa-bars dropbtn" onclick="myFunction()"></i>
+	  		<div id="myDropdown" class="dropdown-content">
+	    		<a class="schedule-now" href="schedule_now.html">Schedule Now</a>
+	  			<a href="#about">About</a>
+	  			<a href="my_bookings.html">My Bookings</a>
+	  			<a href="#contact">Contact</a>
+	  		</div>
+		</div>
+		<!-- Top Navigation Bar -->
+		<div class="nav-group">
+			<a class="schedule-now" href="schedule_now.html">Schedule Now</a>
+			<a class="nav-links" href="index.html#about">About</a>
+			<a class="nav-links" href="my_bookings.html">My Bookings</a>
+			<a class="nav-links" href="index.html#contact">Contact</a>
+		</div>
+	</nav>
+	<div class="wrap">
+		<header>
+			<section id="my-bookings" class="my-bookings">
+				<div class="header-wrap">
+					<div class="header-grid">
+						<div class="header-grid-left">
+							<div class="my-bookings-img">
+								<img src="images/my-bookings2.jpg" class="my-bookings-img">
+							</div>
+						</div>
+						<div class="header-grid-right">
+							<h2 class="enter-bookings">Enter your e-mail or phone number bellow to find your bookings:</h2>
+							<form class="input-user-info">
+						    <input type="text" id="search-bookings" class="input-my-bookings" name="user-info" placeholder="Insert e-mail or phone number">
+						    <a class="find-bookings-btn" href="#find-bookings">Find</a>
+						  </form>
+						  <div class="booking-area">
+						  	<div class="booking-info">
+  						    <div class="booking-info-details">
+  							    <p class="detail">Name :</p>
+  							    <p class="detail">Address :</p>
+  							    <p class="detail">Rooms :</p>
+  							    <p class="detail">Bathrooms :</p>
+  							    <p class="detail">Date :</p>
+  							    <p class="detail">Time :</p>
+  							  </div>
+  							  <div class="booking-info-details">
+  							    <p class="detail">Full Name Example</p>
+  							    <p class="detail">214 Sample St. - Oxford - Ohio</p>
+  							    <p class="detail">2</p>
+  							    <p class="detail">3</p>
+  							    <p class="detail">2019-05-13</p>
+  							    <p class="detail">01:00 PM - 03:30 PM</p>
+  							  </div>
+  							</div>
+  							<div class="bottom-box">
+  							  <p class="changes">Need some change? <a href="index.html#contact" class="link-contact">Contact Us</a></p>
+  							</div>
+              </div>
+                <div class="image-circles-area">
+                  <img src="images/circles.png" class="circles-bookings">
+                </div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		<footer>
+			<div class="footer">
+				<div class="grid-footer">
+					<div class="location-grid">
+						<h1>Location</h1>
+						<p class="footer-text">Address Line 1</p>
+						<p class="footer-text">Example, Address Line 2</p>
+					</div>
+					<div class="connect-grid">
+						<h1>Connect with us</h1>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-linkedin-in"></i></a>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-facebook-f"></i></a>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-instagram"></i></a>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-twitter"></i></a>
+					</div>
+				</div>
+			<div class="copyright">
+				<p class="copyright-paragraph">Copyright <i class="far fa-copyright"></i> Your Website 2019</p>
+			</div>
+		</footer>
+		</main>
+	</div>
+</body>
+
+<!-- Dropdown Navigation Bar -->
+<script>
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" id="simple-container">
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ease Environment | Schedule Now</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Quicksand&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/home.css">
+	<link rel="stylesheet" href="styles/schedule-now.css">
+	<link rel="stylesheet" href="styles/my-bookings.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="styles/datepicker.css">
+  <link rel="stylesheet" href="styles/timepicker.css">
+  <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+  <!----- Date and time picker for schuduling cleaning ----->
+
+  <script>
+    $( function() {
+      $( "#date" ).datepicker({
+        dateFormat: 'mm/dd/yy'
+      });
+    });
+
+    $( function() {
+      $('#time').timepicker({
+        timeFormat: 'h:mm p',
+        interval: 60,
+        minTime: '10',
+        maxTime: '6:00pm',
+        defaultTime: '11',
+        startTime: '10:00',
+        dynamic: false,
+        dropdown: true,
+        scrollbar: true
+      });
+    });
+  </script>
+
+</head>
+<body>
+	<nav>
+		<a id="logo-nav" href="index.html"><img src="images/logo.png" class="img-logo-nav"></a>
+		<!-- Dropdown Navigation Bar -->
+		<div class="dropdown">
+	  		<i class="fas fa-bars dropbtn" onclick="myFunction()"></i>
+	  		<div id="myDropdown" class="dropdown-content">
+	    		<a class="schedule-now" href="schedule_now.html">Schedule Now</a>
+	  			<a href="#about">About</a>
+	  			<a href="my_bookings.html">My Bookings</a>
+	  			<a href="#contact">Contact</a>
+	  		</div>
+		</div>
+		<!-- Top Navigation Bar -->
+		<div class="nav-group">
+			<a class="schedule-now" href="schedule_now.html">Schedule Now</a>
+			<a class="nav-links" href="index.html#about">About</a>
+			<a class="nav-links" href="my_bookings.html">My Bookings</a>
+			<a class="nav-links" href="index.html#contact">Contact</a>
+		</div>
+	</nav>
+	<div class="wrap">
+		<header>
+			<section id="home" class="home">
+				<div class="content-wrap">
+					<div class="form-schedule-now">
+						<div class="header-title">
+							<h3>Time for your booking!</h3>
+						</div>
+						<div class="schedule-info-grid">
+							<form action="#" method="post" name="book-info" class="form-left">
+								<div class="inline-content-left">
+						    	<label for="date" class="date">Select the<br>Date</label>
+						    	<input type="text" id="date" class="datepicker openemr-datepicker" name="date" placeholder="Select a Date">
+						    	<label for="time" class="time">Select the<br>time</label>
+						    	<input type="text" id="time" class="timepicker" name="time" placeholder="Select a Time">
+						    </div>
+							</form>
+							<form action="#" method="post" name="book-info" class="form-right">
+								<div class="inline-content">
+						    	<label for="fullname" class="fullname">Full Name</label>
+						    	<input type="text" id="fullname" name="fullname" class="schedule-info-form"placeholder="">
+						    	<label for="email" class="email">E-mail</label>
+						    	<input type="text" id="email" name="email" class="schedule-info-form" placeholder="">
+						    	<label for="phone" class="phone">Phone Number</label>
+						    	<input type="text" id="phone" name="phone" class="schedule-info-form" placeholder="">
+						    </div>
+								<div class="grid-label">
+									<div class="inline-location">
+										<label for="state" class="state">State</label>
+										<input type="text" id="state" name="state" class="schedule-info-form" placeholder="">
+									</div>
+									<div class="inline-location">
+										<label for="city" class="city">City</label>
+					    			<input type="text" id="city" name="city" class="schedule-info-form" placeholder="">
+					    		</div>
+								</div>
+								<div class="inline-content">
+					    		<label for="address" class="address">Address</label>
+					    		<input type="text" id="address" name="address" class="schedule-info-form" placeholder="">
+					    	</div>
+					    	<div class="grid-label">
+					    		<div class="inline-numbers">
+							    	<label for="subject" class="number-rooms">Number of rooms</label>
+							    	<input type="text" id="number-rooms" name="number-rooms" class="schedule-info-form" placeholder="">
+							    </div>
+							    <div class="inline-numbers">
+							    	<label for="subject" class="number-bathrooms">Number of bathrooms</label>
+							    	<input type="text" id="number-rooms" name="number-bathrooms" class="schedule-info-form" placeholder="">
+							    </div>
+						    </div>
+							</form>
+						</div>
+						<div class="book-btn">
+							<a href="#book" class="btn-book-now" id="booking-confirmation-open-modal-btn">Book Now</a>
+						</div>
+						<div class="book-form-circles">
+							<img src="images/circles.png" class="book-form-img">
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mobile-schedule-info">
+				<form action="#" method="post" name="book-info" class="form-right-mobile">
+					<div class="inline-content">
+			    	<label for="fullname" class="fullname">Full Name</label>
+			    	<input type="text" id="fullname" name="fullname" class="schedule-info-form"placeholder="">
+			    	<label for="email" class="email">E-mail</label>
+			    	<input type="text" id="email" name="email" class="schedule-info-form" placeholder="">
+			    	<label for="phone" class="phone">Phone Number</label>
+			    	<input type="text" id="phone" name="phone" class="schedule-info-form" placeholder="">
+			    </div>
+					<div class="grid-label">
+						<div class="inline-location">
+							<label for="state" class="state">State</label>
+							<input type="text" id="state" name="state" class="schedule-info-form" placeholder="Ohio">
+						</div>
+						<div class="inline-location">
+							<label for="city" class="city">City</label>
+		    			<input type="text" id="city" name="city" class="schedule-info-form" placeholder="Oxford">
+		    		</div>
+					</div>
+					<div class="inline-content">
+		    		<label for="address" class="address">Address</label>
+		    		<input type="text" id="address" name="address" class="schedule-info-form" placeholder="">
+		    	</div>
+		    	<div class="grid-label">
+		    		<div class="inline-numbers">
+				    	<label for="subject" class="number-rooms">Number of rooms</label>
+				    	<input type="text" id="number-rooms" name="number-rooms" class="schedule-info-form" placeholder="">
+				    </div>
+				    <div class="inline-numbers">
+				    	<label for="subject" class="number-bathrooms">Number of bathrooms</label>
+				    	<input type="text" id="number-rooms" name="number-bathrooms" class="schedule-info-form" placeholder="">
+				    </div>
+			    </div>
+				</form>
+				<div class="book-form-circles-mobile">
+					<img src="images/circles.png" class="book-form-img">
+				</div>
+				<div class="book-btn-mobile">
+					<a href="#book" class="btn-book-now" id="booking-confirmation-open-modal-btn">Book Now</a>
+				</div>
+			</div>
+		</header>
+		<footer>
+			<div class="footer">
+				<div class="grid-footer">
+					<div class="location-grid">
+						<h1>Location</h1>
+						<p class="footer-text">Address Line 1</p>
+						<p class="footer-text">Example, Address Line 2</p>
+					</div>
+					<div class="connect-grid">
+						<h1>Connect with us</h1>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-linkedin-in"></i></a>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-facebook-f"></i></a>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-instagram"></i></a>
+						<a href="" target="_blank"><i class="social-media-icon fab fa-twitter"></i></a>
+					</div>
+				</div>
+			<div class="copyright">
+				<p class="copyright-paragraph">Copyright <i class="far fa-copyright"></i> Your Website 2019</p>
+			</div>
+		</footer>
+		</main>
+	</div>
+</body>
+
+<div id="booking-confirmation-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-text">
+      <p class="modal-title">You're all set. Thank You!</p>
+      <p>Check out "My Bookings" for information about your request.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Dropdown Navigation Bar -->
+<script>
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<!-- Estimated Cost Modal -->
+<script>
+  var modal = document.getElementById("booking-confirmation-modal");
+  var btn = document.getElementById("booking-confirmation-open-modal-btn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>

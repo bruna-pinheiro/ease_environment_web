@@ -1,0 +1,185 @@
+
+/* The sidebar menu */
+.sidenav {
+  margin-top: 70px;
+  height: calc(100% - 70px);
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #39A9DB;
+  overflow-x: hidden;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  text-decoration: none;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 128px;
+  padding: 0px 10px;
+  margin-top: 100px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.sidebar-title {
+  background-color: #7Fc2E0;
+  color: #FFF;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0;
+  padding: 14px 35px;
+  line-height: 28px;
+}
+.sidebar-link {
+  text-align: center;
+  color: #FFF;
+  margin: 1% 0;
+  padding: 10%;
+}
+.sidebar-link:hover {
+  background-color: #2D87AF;
+}
+.active-sidebar-link {
+  background-color: #2D87AF;
+  color: #FFF;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0;
+  padding: 8px 35px;
+  line-height: 28px;
+}
+.sidebar-icon {
+  font-size: 40px;
+}
+.sidebar-link-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin: 10px auto;
+  color: #FFF;
+}
+.sign-out-link {
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.sign-out-icon {
+  font-size: 30px;
+}
+.sign-out-link-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  margin: 10px auto;
+  color: #FFF;
+}
+
+
+
+/* Dropdown */
+/* Dropdown Button */
+.dropbtn {
+  display: none;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  color: #4c4c4c;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  top: 12px;
+  background-color: #39A9DB;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height: 100vh;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+.dropdown-admin-panel-link {
+  color: white;
+  padding: 20% 16px;
+  text-decoration: none;
+  text-align: center;
+  background-color: #7Fc2E0;
+}
+.dropdown-admin-panel-link:hover {
+  color: white;
+  background-color: #2D87AF;
+}
+.dropdown-link {
+  color: white;
+  padding: 20% 16px;
+  text-decoration: none;
+  text-align: center;
+}
+.dropdown-link:hover {
+  color: white;
+  background-color: #2D87AF;
+}
+.dropdown-link-icon {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .sidenav {
+    display: none;
+  }
+  .dropbtn {
+    display: block;
+  }
+}
+
+
+
+
+
+
+

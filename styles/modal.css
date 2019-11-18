@@ -1,0 +1,172 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.second-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.big-modal-content {
+  background-color: #fefefe;
+  margin: 1% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+
+.form-modal-area {
+  background-color: #eae9e9;
+  margin: 0 5%;
+  padding: 25px;
+}
+.input-area {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  margin: 3% 10%;
+  align-items: center;
+}
+.label-modal {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.input-modal {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.submit-modal-area {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: right;
+  margin: 3% 5%;
+}
+.submit-form-modal {
+  padding: 12px 30px;
+  color: white;
+  background-color: #3fa9dd;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.submit-form-modal:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #2d87af;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  color: #DF9A57;
+  margin: 0 6%;
+  padding: 2%;
+}
+.modal-txt {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: black;
+  margin: 0 6%;
+  padding: 2%;
+}
+.modal-ok-btn {
+  background-color: #39a9db;
+  color: white;
+  border: 1px solid #39a9db;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  padding: 12px 25px;
+  text-decoration: none;
+  margin: 3% 40%;
+  cursor: pointer;
+  line-height: 1;
+}
+.modal-ok-btn:hover {
+  background-color: #2d87af;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .form-modal-area {
+    padding: 15px 5px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .modal-content {
+    margin: 5% 2px;
+    padding: 20px;
+    width: 85%;
+  }
+  .big-modal-content {
+    margin: 5% 2px;
+    padding: 9px;
+    width: 90%;
+  }
+  .form-modal-area {
+    padding: 15px 5px;
+  }
+  .modal-title {
+    font-size: 20px;
+  }
+  .label-modal {
+    font-size: 12px;
+  }
+  .submit-modal-area {
+    grid-template-columns: 100%;
+    justify-items: center;
+    margin: 3% 5%;
+  }
+
+}

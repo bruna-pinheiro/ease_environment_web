@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" id="simple-container">
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ease Environment | Booking Details</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans|Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/login.css">
+  <link rel="stylesheet" href="../styles/admin.css">
+  <link rel="stylesheet" href="../styles/admin_booking_details.css">
+  <link rel="stylesheet" href="../styles/admin_booking_details_edit.css">
+  <link rel="stylesheet" href="../styles/sidebar.css">
+</head>
+
+<body>
+  <nav>
+    <a id="logo-nav" href="#home"><img src="../images/logo.png" class="img-logo-nav"></a>
+    <div class="dropdown">
+      <i onclick="myFunction()" class="fas fa-bars dropbtn"></i>
+
+      <div id="myDropdown" class="dropdown-content">
+        <a href="../admin/admin_dashboard.html" class="dropdown-admin-panel-link">Admin <br>Panel</a>
+        <a href="../admin/admin_manage_cleaners.html" class="dropdown-link"><i class="fas fa-users dropdown-link-icon"></i><br> Manage <br>Cleaners</a>
+        <a href="../admin/admin_manage_bookings.html" class="dropdown-link"><i class="fas fa-clipboard-list dropdown-link-icon"></i><br> Manage <br>Bookings</a>
+        <a href="../admin/admin_change_password.html" class="dropdown-link"><i class="fas fa-lock dropdown-link-icon"></i><br> Change <br>Password</a>
+        <a href="#" class="dropdown-link"><i class="fas fa-sign-out-alt fa-rotate-180 dropdown-link-icon"></i><br> Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidenav">
+    <a href="../admin/admin_dashboard.html"><p class="sidebar-title">Admin Panel</p></a>
+    <a class="sidebar-link" href="../admin/admin_manage_cleaners.html"><i class="fas fa-users sidebar-icon"></i><p class="sidebar-link-text">Manage Cleaners</p></a>
+    <a class="active-sidebar-link" href="../admin/admin_manage_bookings.html"><i class="fas fa-clipboard-list sidebar-icon"></i><p class="sidebar-link-text">Manage Bookings</p></a>
+    <a class="sidebar-link" href="../admin/admin_change_password.html"><i class="fas fa-lock sidebar-icon"></i><p class="sidebar-link-text">Change Password</p></a>
+    <a class="sign-out-link sidebar-link" href="../admin/login.html"><i class="fas fa-sign-out-alt fa-rotate-180 sign-out-icon"></i><p class="sign-out-link-text">Sign Out</p></a>
+  </div>
+
+  <div class="wrap"> 
+    <div class="main">
+      <div class="back-btn-area-mobile">
+        <a href="../admin/admin_manage_bookings.html" class="booking-details-btn">Cancel</a>
+      </div>
+      <p class="header-line"></p>
+      <p class="booking-details-title">Booking Details Edit</p>
+      <div class="infos-area">
+        <div>
+          <div class="first-info-area">
+            <p class="info-title">Name: </p>
+            <input type="text" class="booking-details-input" placeholder="John Brown">
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Address: </p>
+            <input type="text" class="booking-details-input" placeholder="123 Sample St.">
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Date: </p>
+            <input type="text" class="booking-details-input" placeholder="03/21/2019">
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Rooms: </p>
+            <input type="text" class="booking-details-input" placeholder="2">
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Price: </p>
+            <input type="text" class="booking-details-input" placeholder="$40.00">
+          </div>
+          <div class="first-info-area">
+            <p class="info-title">Status: </p>
+            <input type="text" class="booking-details-input" placeholder="Confirmed">
+          </div>
+        </div>
+        <div>
+          <div class="second-info-area">
+            <p class="info-title">Email: </p>
+            <input type="text" class="booking-details-input" placeholder="123 Sample St.">
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Phone Number: </p>
+            <input type="text" class="booking-details-input" placeholder="123 Sample St.">
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Time: </p>
+            <input type="text" class="booking-details-input" placeholder="03/21/2019">
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Bathroom: </p>
+            <input type="text" class="booking-details-input" placeholder="2">
+          </div>
+          <div class="second-info-area">
+            <p class="info-title">Cleaner Apointed: </p>
+            <input type="text" class="booking-details-input" placeholder="$40.00">
+          </div>
+          <div class="second-info-area">
+          </div>
+        </div>
+      </div>
+      <div class="booking-details-btns-area">
+        <div class="back-btn-area">
+          <a href="../admin/admin_booking_details.html" class="booking-details-btn">Cancel</a>
+        </div>
+        <div class="advance-btns-area">
+          <a href="#" class="booking-details-btn border-left-25">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+<script type="text/javascript">
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
